@@ -29,3 +29,7 @@ def get_live_scores():
     print(f"[DEBUG] API Response: {response.status_code} - {response.text}")
     
     return response.json()
+
+from dotenv import load_dotenv
+load_dotenv()  # Loads variables from .env
+API_KEY = os.getenv("FOOTBALL_API_KEY")
